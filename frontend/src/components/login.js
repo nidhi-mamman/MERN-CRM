@@ -59,7 +59,7 @@ catch(error){
           <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-6 form-reg" style={{padding:"40px 100px 0px"}}>
+                    <div className="col-lg-6 form-reg">
                         <Link to="/" className="btn btn-viewall">Back to Home</Link>
                         <h4 className="my-4">AlumniNet</h4>
                         <h3 className="mb-0">Welcome Back</h3>
@@ -82,7 +82,7 @@ catch(error){
 
 
                     </div>
-                    <div className="col-lg-6 bg-login-right p-0">
+                    <div className="col-lg-6 d-none d-lg-block bg-login-right p-0">
                         <div className="bg-reg-login-color">
 
                             <h2 className="text-white">"The connections I've made through AlumNet have been invaluable for my career growth."</h2>

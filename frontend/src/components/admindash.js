@@ -108,7 +108,7 @@ export const Admindash = () => {
                 <div className="col-lg-2 sidebar px-0 ">
                     <Navbar />
                 </div>
-                <div className="col-lg-10 right-panel py-3 px-5 sidebar">
+                <div className="col-lg-10 right-panel py-3 px-3 px-md-4 px-lg-5 sidebar">
                     <p className="m-0 " style={{ color: " #b45309", fontSize: "12px" }}>DASHBOARD</p>
                     <h2 className="m-0 fw-bolder fs-2">Welcome back, {userName}</h2>
                     <p style={{ color: " #a3a2a1" }}>Here's what's happening in your alumni network.</p>
@@ -180,8 +180,8 @@ export const Admindash = () => {
                     <div className="events-jobs ">
                         <div className="events bg-white mb-lg-5 mb-sm-0 ">
                             <div className="row p-3 pb-0 d-flex justify-content-between ">
-                                <div className="col-4 fw-bolder">Recent Events</div>
-                                <div className="col-4 d-flex justify-content-end fs-6">
+                                <div className="col fw-bolder">Recent Events</div>
+                                <div className="col-auto d-flex justify-content-end fs-6">
                                     <Link to="/events" className="btn d-flex py-1" id="viewall">
                                         view All
                                         <span className="ms-2">
@@ -222,8 +222,8 @@ export const Admindash = () => {
 
                         <div className="events bg-white w-md-100 mb-5">
                             <div className="row p-3 pb-0 d-flex justify-content-between ">
-                                <div className="col-4 fw-bolder">Recent Jobs</div>
-                                <div className="col-4 d-flex justify-content-end">
+                                <div className="col fw-bolder">Recent Jobs</div>
+                                <div className="col-auto d-flex justify-content-end">
                                     <Link to="/jobs" className="btn d-flex py-1 " id="viewall">
                                         view All
                                         <span className="ms-2">
@@ -268,16 +268,16 @@ export const Admindash = () => {
 
                     <div className="anoucement bg-white mb-4 ">
                         <div className="row p-3 pb-0 d-flex justify-content-between ">
-                            <div className="col-3 fw-bolder">Latest Announcement</div>
-                            <div className="col-3 d-flex justify-content-end">
+                            <div className="col fw-bolder">Latest Announcement</div>
+                            <div className="col-auto d-flex justify-content-end">
                                 <Link to="/news" className="btn d-flex py-1" id="viewall">view All</Link>
                             </div>
                         </div>
                         <div className="row p-3 mt-2 pt-0 d-flex justify-content-between">
-                            <div className="col-8">
+                            <div className="col">
                                 {latestAnnouncement ? (
                                     <div className="d-flex justify-content-start g-2">
-                                        <div className="col-1">
+                                        <div className="flex-shrink-0">
                                             <p className="mb-0">
                                                 <span className="p-1" style={{ backgroundColor: "rgb(250, 245, 255)", color: "rgb(145, 110, 180)" }}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -287,7 +287,7 @@ export const Admindash = () => {
                                                 </span>
                                             </p>
                                         </div>
-                                        <div className="col-8 ms-2">
+                                        <div className="flex-grow-1 ms-2">
                                             <p className="mb-0">{latestAnnouncement.title}</p>
                                             <p style={{ color: "#8c8c8c" }}>{latestAnnouncement.category} • {new Date(latestAnnouncement.createdAt).toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" })}</p>
                                             <p style={{ color: "#8c8c8c" }}>{latestAnnouncement.body}</p>
@@ -295,7 +295,7 @@ export const Admindash = () => {
                                     </div>
                                 ) : (
                                     <div className="d-flex justify-content-start g-2">
-                                        <div className="col-1">
+                                        <div className="flex-shrink-0">
                                             <p className="mb-0">
                                                 <span className="p-1" style={{ backgroundColor: "rgb(250, 245, 255)", color: "rgb(145, 110, 180)" }}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -305,14 +305,14 @@ export const Admindash = () => {
                                                 </span>
                                             </p>
                                         </div>
-                                        <div className="col-8 ms-2">
+                                        <div className="flex-grow-1 ms-2">
                                             <p className="mb-0">No announcements available yet.</p>
                                             <p style={{ color: "#8c8c8c" }}>Create one from the News page.</p>
                                         </div>
                                     </div>
                                 )}
                             </div>
-                            <div className="col-4 pe-4 d-flex justify-content-end">
+                            <div className="col-auto pe-4 d-flex justify-content-end">
                                 <p className="p-1" style={{ backgroundColor: "grey", color: "rgb(70, 67, 67)", height: "25px", fontSize: "14px" }}>info</p>
                             </div>
                         </div>

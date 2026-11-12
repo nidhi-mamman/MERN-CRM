@@ -8,8 +8,8 @@ export const Homepage = () => {
             <div className="container-fluid header position-fixed top-0 z-2 ">
                 <div className="container">
                     <div className="row py-3 d-flex align-items-center justify-content-between">
-                        <div className="col-md-3" >AlumNet </div>
-                        <div className="col-md-3 d-flex justify-content-end"><Link to="/login" className="btn btn-viewall">Sign in</Link><Link to="/register" className="btn btn-viewall">Join Network</Link></div>
+                        <div className="col-auto fw-bold" >AlumNet </div>
+                        <div className="col-auto d-flex justify-content-end gap-1"><Link to="/login" className="btn btn-viewall">Sign in</Link><Link to="/register" className="btn btn-viewall">Join Network</Link></div>
 
                     </div>
                 </div>
@@ -18,16 +18,16 @@ export const Homepage = () => {
             <div className="container-fluid hero-bg ">
                 <div className="row hero-bg-color d-flex align-items-center justify-content-between "> 
 
-                    <div className="col-lg-5 pt-5"><p className="top-heading">Alumni Network Platform</p>
+                    <div className="col-lg-5 pt-5 hero-content"><p className="top-heading">Alumni Network Platform</p>
                         <h1><span className="text-white">Where Graduates</span><br></br>
                            <span className="heading-bottom">Stay Connected</span> </h1>
                         <p className="text-white " style={{fontSize:"18px"}}>Reconnect with classmates, discover career opportunities, and stay engaged with your alma mater through our unified alumni platform.</p>
                         <Link to="/register" className="btn btn-viewall">Join the Network  <span className="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-3 h-3 ml-1" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></Link> <Link to="/login" className="btn btn-viewall">Sign in</Link>
                     </div>
-                    <div className="col-lg-6 pt-5">
+                    <div className="col-lg-6 pt-5 hero-images">
                         <div className="row d-flex justify-content-end">
                             <div className="col-lg-6 pb-3">
-                                <img src="/assets/images/hero-right-1.jpeg" alt="Hero Image" className="img-fluid"  style={{height:"191px",width:"300px",borderRadius:"10px"}}/>
+                                <img src="/assets/images/hero-right-1.jpeg" alt="Hero Image" className="img-fluid hero-img"  style={{height:"191px",width:"300px",borderRadius:"10px"}}/>
                                 <div className="p-3 text-white herotext mt-2 " ><p className="m-0" style={{fontSize:"30px"}}>10k+</p>
                                 <p className="m-0" style={{margin:"0px"}}>Active Alumni</p></div>
 
@@ -35,7 +35,7 @@ export const Homepage = () => {
                             <div className="col-lg-6 pt-3">
                                 <div className="p-3 text-white herotext mb-2 " ><p className="m-0" style={{fontSize:"30px"}}>500+</p>
                                 <p className="m-0 " style={{margin:"0px"}}>Job Opportunities</p></div>
-                                <img src="/assets/images/hero-right-2.webp" alt="Hero Image" className="img-fluid"  style={{height:"191px",width:"300px", borderRadius:"10px"}}/>
+                                <img src="/assets/images/hero-right-2.webp" alt="Hero Image" className="img-fluid hero-img"  style={{height:"191px",width:"300px", borderRadius:"10px"}}/>
                                 
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export const Homepage = () => {
 
             </div>
 
-            <div className="container py-5 my-5">
+            <div className="container py-5 my-lg-5">
                 <p className="m-0">What We Offer</p>
                 <h2 className="m-0">Everything You Need to Stay Connected</h2>
                 <div className="cards  d-flex  mt-4 gap-3">
@@ -90,9 +90,9 @@ export const Homepage = () => {
 
 
             </div>
-            <div className="readytoconnect text-center  mt-5">
+            <div className="readytoconnect text-center px-3 mt-5">
                 <h2 className="text-white">Ready to Reconnect?</h2>
-                <p className="my-4">Join thousands of alumni who are already building meaningful connections <br></br> through AlumNet.</p>
+                <p className="my-4">Join thousands of alumni who are already building meaningful connections <br className="d-none d-md-inline"></br> through AlumNet.</p>
                 <Link to="/register" className="btn btn-viewall">Get Started Today   <span className="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-3 h-3 ml-1" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></Link>
             </div>
             <div className="container-fluid footmain ">

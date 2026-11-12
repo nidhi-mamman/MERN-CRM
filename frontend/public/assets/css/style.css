@@ -82,7 +82,7 @@
 }
 
 .form-reg{
-   padding: 0px 50px;
+   padding: 40px 100px 0px;
 }
 .btn{
     display: inline-flex;
@@ -1168,3 +1168,107 @@
         grid-template-columns: 1fr;
       }
     }
+
+
+/* ══════════════════════════════════════════
+   MOBILE FRIENDLY OVERRIDES
+   (kept last so they win over earlier rules)
+══════════════════════════════════════════ */
+
+/* Never let the page scroll sideways */
+html, body { max-width: 100%; overflow-x: clip; }
+img { max-width: 100%; }
+.hero-img { object-fit: cover; }
+
+/* Tablet + phone (sidebar collapses to the hamburger menu) */
+@media (max-width: 991.98px) {
+  /* Column that holds the navbar: no gutter, topbar sticks to the top */
+  .row > .col-lg-2:has(.mobile-topbar) {
+    position: sticky; top: 0; z-index: 100;
+    padding-left: 0; padding-right: 0;
+  }
+  .mobile-topbar { position: relative; }
+
+  /* Slide-out sidebar */
+  aside {
+    width: 260px; max-width: 82vw;
+    overflow-y: auto;
+    box-shadow: 6px 0 28px rgba(0,0,0,.16);
+  }
+  aside:not(.open) { box-shadow: none; }
+
+  /* Homepage hero: let content define height instead of a fixed 100vh */
+  .hero-bg, .hero-bg-color { height: auto; min-height: 100vh; }
+  .hero-bg-color { padding: 90px 20px 50px; }
+  .hero-bg-color .hero-content { text-align: center; }
+  .hero-images .row { justify-content: center !important; }
+  .hero-img { width: 100% !important; height: 220px !important; }
+
+  /* Homepage feature cards wrap instead of squeezing */
+  .cards { flex-wrap: wrap; }
+  .cards > .card { flex: 1 1 260px; }
+  .readytoconnect { padding: 60px 16px; }
+
+  /* Login / register form */
+  .form-reg { padding: 32px 40px 40px; }
+
+  /* Dashboard stat cards: 2-column grid */
+  .card-dash-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .card-dash { width: 100%; height: 100%; padding-right: 1rem !important; }
+  .card-dash .pe-5 { padding-right: 0 !important; }
+  .events-jobs { gap: 16px; }
+  .events, .anoucement { width: 100%; }
+
+  /* Events page: topbar is not fixed, so no extra top offset needed */
+  .events-page .main,
+  .jobs-page .main { padding: 24px 20px 60px; }
+}
+
+/* Phones */
+@media (max-width: 575.98px) {
+  /* Homepage */
+  .header .btn { padding: 6px 10px; font-size: 13px; }
+  .hero-bg-color h1 { font-size: 32px; }
+  .hero-bg-color .hero-content p[style] { font-size: 16px !important; }
+  .hero-img { height: 180px !important; }
+  .readytoconnect h2 { font-size: 26px; }
+  .readytoconnect p { font-size: 16px; }
+  .foot { text-align: center; }
+  .foot p { margin: 0; }
+
+  /* Login / register */
+  .form-reg { padding: 24px 18px 40px; }
+
+  /* Shared page headings */
+  main { padding: 18px 14px 60px; }
+  .page-title,
+  .events-page .page-title,
+  .jobs-page .page-title { font-size: 26px; }
+
+  /* Dashboard */
+  .card-dash-main { gap: 10px; }
+  .card-dash { padding: 12px !important; }
+
+  /* Events / jobs / news / profile */
+  .events-page .main,
+  .jobs-page .main { padding: 18px 14px 60px; }
+  .events-page .ev-card { padding: 18px 16px 16px; }
+  .events-page .ev-footer { flex-wrap: wrap; gap: 10px; }
+  .jobs-page .job-card { padding: 16px; }
+  .jobs-page .job-title-row { flex-wrap: wrap; }
+  .announcement-card { padding: 16px; }
+  .profile-card { padding: 20px 16px; border-radius: 14px; margin-top: 20px; }
+  .profile-actions .btn { flex: 1 1 auto; }
+  .modal-box,
+  .jobs-page .modal-box { padding: 22px 18px 18px; }
+  .jobs-page .modal-overlay { padding: 16px 10px; }
+  .modal-actions { flex-wrap: wrap; }
+  .modal-actions button { flex: 1 1 auto; }
+
+  /* 16px inputs stop iOS Safari from zooming on focus */
+  input, select, textarea { font-size: 16px !important; }
+}

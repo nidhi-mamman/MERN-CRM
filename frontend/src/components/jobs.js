@@ -213,11 +213,11 @@ export const Jobs = () => {
                             <input type="text" className="form-control-custom" value={company} onChange={(e) => setcompany(e.target.value)} placeholder="Company name" />
 
                             <div className="row g-3">
-                                <div className="col-6">
+                                <div className="col-12 col-sm-6">
                                     <label className="form-label-custom">Location</label>
                                     <input type="text" className="form-control-custom" value={location} onChange={(e) => setlocation(e.target.value)} placeholder="City, Country" style={{ marginBottom: "0" }} />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-12 col-sm-6">
                                     <label className="form-label-custom">Type</label>
                                     <select className="form-control-custom form-select-custom" value={type} onChange={(e) => settype(e.target.value)} style={{ marginBottom: "0" }}>
                                         <option value="Full-Time">Full-Time</option>
@@ -238,11 +238,11 @@ export const Jobs = () => {
                             <textarea className="form-control-custom" value={requirements} onChange={(e) => setrequirements(e.target.value)} placeholder="Job requirements"></textarea>
 
                             <div className="row g-3">
-                                <div className="col-6">
+                                <div className="col-12 col-sm-6">
                                     <label className="form-label-custom">Salary Range</label>
                                     <input type="text" className="form-control-custom" value={salary} onChange={(e) => setsalary(e.target.value)} placeholder="e.g. $80k-$120k" style={{ marginBottom: "0" }} />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-12 col-sm-6">
                                     <label className="form-label-custom">Apply Link</label>
                                     <input type="url" className="form-control-custom" value={applylink} onChange={(e) => setapplylink(e.target.value)} placeholder="https://..." style={{ marginBottom: "0" }} />
                                 </div>

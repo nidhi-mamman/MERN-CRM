@@ -104,7 +104,7 @@ export const Events = () => {
 
     return (
         <>
-            <div className="conatiner-fluid events-page">
+            <div className="container-fluid events-page">
                 <div className="row">
                     <div className="col-lg-2">
                         <Navbar />
@@ -181,11 +181,11 @@ export const Events = () => {
                                                     <textarea className="fc" rows="3" value={description} onChange={(e) => setdescription(e.target.value)} placeholder="Brief description"></textarea>
                                                 </div>
                                                 <div className="row g-3 mb-3">
-                                                    <div className="col-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <label className="fl">Date *</label>
                                                         <input className="fc" type="date" value={date} onChange={(e) => setdate(e.target.value)} />
                                                     </div>
-                                                    <div className="col-6">
+                                                    <div className="col-12 col-sm-6">
                                                         <label className="fl">Time</label>
                                                         <input className="fc" type="time" value={time} onChange={(e) => settime(e.target.value)} />
                                                     </div>
