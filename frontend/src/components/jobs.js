@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useMemo, useState } from "react"
 import { Navbar } from "./navbar"
 
@@ -20,7 +21,7 @@ export const Jobs = () => {
 
     const getjobs = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/jobs")
+            const res = await fetch(`${API_URL}/api/jobs`)
 
             if (res.ok) {
                 const result = await res.json()
@@ -81,7 +82,7 @@ export const Jobs = () => {
         }
 
         try {
-            const res = await fetch("http://localhost:9000/api/jobs", {
+            const res = await fetch(`${API_URL}/api/jobs`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

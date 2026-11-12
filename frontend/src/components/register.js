@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 
 import { useState } from "react"
 import {Link, useNavigate} from "react-router-dom"
@@ -30,7 +31,7 @@ if(pass!==cpass){
 }else{
 try{
     const data={Name:name,Email:email,Password:pass,Department:department,BatchYear:batchyear}
-    const res=await fetch("http://localhost:9000/api/register",{
+    const res=await fetch(`${API_URL}/api/register`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

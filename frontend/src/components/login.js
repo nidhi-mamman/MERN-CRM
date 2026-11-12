@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useState } from "react"
 import{Link, useNavigate} from "react-router-dom"
 
@@ -13,7 +14,7 @@ const Login=async()=>{
 Password:pass
     }
 try{
-    const response=await fetch("http://localhost:9000/api/login",{
+    const response=await fetch(`${API_URL}/api/login`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"},

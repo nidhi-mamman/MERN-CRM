@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react"
 import { Navbar } from "./navbar"
 
@@ -17,7 +18,7 @@ export const Events = () => {
 
     const getevents = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/events")
+            const res = await fetch(`${API_URL}/api/events`)
 
             if (res.ok) {
                 const result = await res.json()
@@ -77,7 +78,7 @@ export const Events = () => {
         }
 
         try {
-            const res = await fetch("http://localhost:9000/api/events", {
+            const res = await fetch(`${API_URL}/api/events`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react"
 import { Navbar } from "./navbar"
 
@@ -34,7 +35,7 @@ export const Profile = () => {
         }
 
         try {
-            const res = await fetch(`http://localhost:9000/api/users/${userId}`)
+            const res = await fetch(`${API_URL}/api/users/${userId}`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -106,7 +107,7 @@ export const Profile = () => {
                 payload.Password = newPassword
             }
 
-            const res = await fetch(`http://localhost:9000/api/users/${userId}`, {
+            const res = await fetch(`${API_URL}/api/users/${userId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload),

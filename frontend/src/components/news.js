@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react"
 import { Navbar } from "./navbar"
 
@@ -12,7 +13,7 @@ export const News = () => {
 
     const loadAnnouncements = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/announcements")
+            const res = await fetch(`${API_URL}/api/announcements`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -37,7 +38,7 @@ export const News = () => {
         if (!title.trim() || !body.trim()) return
 
         try {
-            const res = await fetch("http://localhost:9000/api/announcements", {
+            const res = await fetch(`${API_URL}/api/announcements`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ title, body, category }),

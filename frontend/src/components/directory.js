@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useMemo, useState } from "react"
 import { Navbar } from "./navbar"
 
@@ -9,7 +10,7 @@ export const Directory=()=>{
 
     const getusers=async()=>{
         try{
-            const res=await fetch("http://localhost:9000/api/users")
+            const res=await fetch(`${API_URL}/api/users`)
             if(res.ok){
                 const result=await res.json()
                 if(result.Statuscode===1){

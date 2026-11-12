@@ -1,3 +1,4 @@
+import { API_URL } from "../config";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Navbar } from "./navbar"
@@ -19,7 +20,7 @@ export const Admindash = () => {
 
     const getusers = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/users")
+            const res = await fetch(`${API_URL}/api/users`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -34,7 +35,7 @@ export const Admindash = () => {
 
     const getjobs = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/jobs")
+            const res = await fetch(`${API_URL}/api/jobs`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -49,7 +50,7 @@ export const Admindash = () => {
 
     const getevents = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/events")
+            const res = await fetch(`${API_URL}/api/events`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -64,7 +65,7 @@ export const Admindash = () => {
 
     const getLatestAnnouncement = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/announcements/latest")
+            const res = await fetch(`${API_URL}/api/announcements/latest`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
@@ -78,7 +79,7 @@ export const Admindash = () => {
 
     const getAnnouncements = async () => {
         try {
-            const res = await fetch("http://localhost:9000/api/announcements")
+            const res = await fetch(`${API_URL}/api/announcements`)
             if (res.ok) {
                 const result = await res.json()
                 if (result.Statuscode === 1) {
